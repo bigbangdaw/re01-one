@@ -1,6 +1,7 @@
 /* 引入需要的字体 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,14 +15,15 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	flex-direction: column;
-	background-image:url("https://b0.bdstatic.com/ugc/oVWWWpdeWI6TgmlIe3RYSwce08c42610eb1dc0c17d3acc7ce09fd8.jpg?x-bce-process=image/watermark,image_NDU0ZjAyZDU5YjQ1LnBuZw==,bucket_searchbox,w_154,text_QOWkp-mtlOeOi3Zpdmk=,type_RlpMYW5UaW5nSGVp,size_154,x_102,y_102,interval_4,color_FFFFFF,effect_softoutline,shc_000000,blr_2,align_1")
-	;
+	background-image:url("https://b0.bdstatic.com/ugc/oVWWWpdeWI6TgmlIe3RYSwce08c42610eb1dc0c17d3acc7ce09fd8.jpg?x-bce-process=image/watermark,image_NDU0ZjAyZDU5YjQ1LnBuZw==,bucket_searchbox,w_154,text_QOWkp-mtlOeOi3Zpdmk=,type_RlpMYW5UaW5nSGVp,size_154,x_102,y_102,interval_4,color_FFFFFF,effect_softoutline,shc_000000,blr_2,align_1");
+	
 }
 .box {
 	position: relative;
 	width: 380px;
 	height: 420px;
-	background: #1c1c1c;
+	background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(222,34,72,0.7637429971988796) 32%, rgba(0,191,240,1) 95%);
 	border-radius: 8px;
 	overflow: hidden;
 }
@@ -66,7 +68,8 @@ body {
 form {
 	position: absolute;
 	inset: 2px;
-	background: #28292d;
+	background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(222,34,72,0.7637429971988796) 32%, rgba(0,191,240,1) 95%);
 	padding: 50px 40px;
 	border-radius: 8px;
 	z-index: 2;
@@ -95,7 +98,7 @@ h2 {
 	outline: none;
 	box-shadow: none;
 	border: none;
-	color: #23242a;
+	color: #00caca;
 	font-size: 1em;
 	letter-spacing: 0.05em;
 	transition: 0.5s;
