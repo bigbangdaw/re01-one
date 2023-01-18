@@ -14,10 +14,10 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	flex-direction: column;
-	background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(58,215,170,0.6797093837535014) 60%, rgba(100,253,45,0.6965161064425771) 100%);
 	background-image:url("https://tse3-mm.cn.bing.net/th/id/OIP-C.nG9abe3lsIObAlOq3rZTJQHaEo?w=284&h=180&c=7&r=0&o=5&pid=1.7")
 	no-repeat;
+	background-attachment:cover;
+	background-attachment:fixed;
 }
 .box {
 	position: relative;
