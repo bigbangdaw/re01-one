@@ -1,0 +1,68 @@
+span{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(34,193,195);
+    color: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(217,48,144,1) 7%, rgba(253,45,121,0.39119397759103647) 29%, rgba(104,58,215,0.5060399159663865) 45%, rgba(104,58,215,1) 59%, rgba(104,58,215,1) 68%, rgba(175,179,79,1) 86%);
+    /* 字间距 */
+    letter-spacing: 0px;
+    /* 模糊滤镜 */
+    filter: blur(2px);
+    /* 执行动画：动画名称 时长 线性的 无限次播放 */
+    animation: animate 2.5s linear infinite;
+}
+/* 接下来为每一个span元素设置动画延迟时间 */
+span:nth-child(1){
+    animation-delay: 0s;
+}
+span:nth-child(2){
+    animation-delay: 0.25s;
+}
+span:nth-child(3){
+    animation-delay: 0.5s;
+}
+span:nth-child(4){
+    animation-delay: 0.75s;
+}
+span:nth-child(5){
+    animation-delay: 1s;
+}
+span:nth-child(6){
+    animation-delay: 1.25s;
+}
+span:nth-child(7){
+    animation-delay: 1.5s;
+}
+span:nth-child(8){
+    animation-delay: 1.75s;
+}
+span:nth-child(9){
+    animation-delay: 2s;
+}
+span:nth-child(10){
+    animation-delay: 2.25s;
+}
+
+/* 定义动画 */
+@keyframes animate {
+    0%,100%{
+        color: #fff;
+        /* 模糊滤镜 */
+        filter: blur(2px);
+        /* 文字阴影 */
+        text-shadow: 
+        0 0 10px rgb(34,193,195),
+        0 0 20px #fd2d79,
+        0 0 30px #fd2d79,
+        0 0 40px #fd2d79,
+        0 0 100px#fd2d79,
+        0 0 200px#fd2d79,
+        0 0 400px#fd2d79,
+        
+    }
+    5%,95%{
+        color: rgb(34,193,195);
+        color:#fd2d79;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
