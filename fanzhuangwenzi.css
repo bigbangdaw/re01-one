@@ -4,7 +4,6 @@
     /* 100%窗口宽度和高度 */
     width: 80vw;
     height: 20vh;
-    margin: 0 150px;
     /* 弹性布局 水平、垂直居中 */
     display: flex;
     justify-content: center;
@@ -15,8 +14,6 @@
     perspective: 300;
     -webkit-perspective: 300;
     overflow: hidden;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 20px 20px 50px 50px #ff88c2;
 }
 /* 动画字符所在的块 */
 .chars{
