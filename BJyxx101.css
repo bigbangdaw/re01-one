@@ -1,0 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  font-size: 15px;
+  }
+
+
+span {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: transparent;
+  text-shadow:
+    0px 0px 1px rgba(255, 255, 255, .6),
+    0px 4px 4px rgba(0, 0, 0, .05);
+  letter-spacing: .2rem;
+}
+
+@keyframes movement {
+  0%, 100% {
+    background-size: 
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+  }
+  25% {
+    background-size: 
+      100vmax 100vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      60vmax 60vmax;
+    background-position:
+      -60vmax -90vmax,
+      50vmax -40vmax,
+      0vmax -20vmax,
+      -40vmax -20vmax,
+      40vmax 60vmax;
+  }
+  50% {
+    background-size: 
+      80vmax 80vmax,
+      110vmax 110vmax,
+      80vmax 80vmax,
+      60vmax 60vmax,
+      80vmax 80vmax;
+    background-position:
+      -50vmax -70vmax,
+      40vmax -30vmax,
+      10vmax 0vmax,
+      20vmax 10vmax,
+      30vmax 70vmax;
+  }
+  75% {
+    background-size: 
+      90vmax 90vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      70vmax 70vmax;
+    background-position:
+      -50vmax -40vmax,
+      50vmax -30vmax,
+      20vmax 0vmax,
+      -10vmax 10vmax,
+      40vmax 60vmax;
+  }
+} */
+
+span {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: burlywood;
+  text-shadow:
+    0px 0px 1px rgba(255, 255, 255, .6),
+    0px 4px 4px rgba(0, 0, 0, .05);
+  letter-spacing: .2rem;
+}
+span::after {
+  content: attr(data-spotlight);
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+  clip-path: ellipse(100px 100px at 0% 50%);
+  animation: spotlight 5s infinite;
+  background-image: url("https://images.unsplash.com/photo-1579547621869-0ddb5f237392?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size: 150%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes spotlight {
+  0% {
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+  
+  50% {
+    -webkit-clip-path: ellipse(100px 100px at 100% 50%);
+    clip-path: ellipse(100px 100px at 100% 50%);
+  }
+  
+  100% {
+    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+    clip-path: ellipse(100px 100px at 0% 50%);
+  }
+}

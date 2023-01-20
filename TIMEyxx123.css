@@ -1,0 +1,56 @@
+/* 引入Jura字体 */
+@import url("http://fonts.googleapis.com/css?family=Jura:200,300,400,500,600,700,800,900");
+body{
+    background-image:url("https://b0.bdstatic.com/ugc/oVWWWpdeWI6TgmlIe3RYSw223964a4c1add7638f037e3645fd5ab5.jpg?x-bce-process=image/watermark,image_NDU0ZjAyZDU5YjQ1LnBuZw==,bucket_searchbox,w_28,text_QOWkp-mtlOeOi3Zpdmk=,type_RlpMYW5UaW5nSGVp,size_28,x_19,y_19,interval_4,color_FFFFFF,effect_softoutline,shc_000000,blr_2,align_1" );
+    background-size:cover;
+    font-family: 'Jura';
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 8px;
+    overflow: hidden;
+}
+.column,
+.colon{
+    /* 行内块元素 */
+    display: inline-block;
+    font-size: 86px;
+    line-height: 86px;
+    /* 顶部对齐 */
+    vertical-align: top;
+}
+.column{
+    /* 设置过渡 */
+    transition: 0.3s;
+}
+/* 冒号 */
+.colon{
+    /* 垂直居中（偏上一点） */
+    transform: translateY(calc(50vh - 55px));
+    /* 过渡 */
+    transition: 0.3s;
+}
+.colon::after{
+    content: ":";
+}
+/* 数字默认样式 */
+.num{
+    opacity: 0.25;
+    transition: 0.5s;
+}
+/* 当前时间（正中间数字） */
+.num.visible{
+    opacity: 1;
+    text-shadow: 1px 1px 0 #e493d0;;
+}
+/* 邻近的 */
+.num.near{
+    opacity: 0.35;
+}
+/* 远的 */
+.num.far{
+    opacity: 0.15;
+}
+/* 更远的（越远越透明） */
+.num.distant{
+    opacity: 0.1;
+}

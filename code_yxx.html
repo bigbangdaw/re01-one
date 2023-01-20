@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>兔年快乐</title>
+    <link rel="stylesheet" href="./TIMEyxx123.css">
+    <link rel="stylesheet" href="./BJyxx101.css">
+     
+    <style>
+       body {
+        margin: 0;
+        height: 100%;
+      }
+
+      body {
+        background-color: #111;
+      }
+
+      .fireworks-canvas, .word-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .word-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+      }
+
+      .word-canvas {
+        will-change: transform;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+    <span>2023一起加油</span>
+  </div>
+    
+  <script src="./TIMEyxx1.js"></script>
+    <canvas id="fireworks" class="fireworks-canvas"></canvas>
+    <div class="word-container">
+      <canvas id="word" class="word-canvas"></canvas>
+    </div>
+
+    <script src="./yxx1.js"></script>
+    <script src="./yxx_2.js"></script>
+    <script src="./yxx_3.js"></script>
+    <script src="./yxx4.js"></script>
+    <script src="./yxx5.js"></script>
+    <script src="./Myxx.js"></script>
+
+    <script>
+      {
+        const dom = document.querySelector('#fireworks')
+        const options = {}
+
+        const fireworks = new Fireworks(dom, options)
+        fireworks.start()
+
+        dom.addEventListener('click', (event) => {
+          fireworks.createFirework(event.offsetX, event.offsetY)
+        })
+      }
+
+      {
+        const dom = document.querySelector('#word')
+        const image = imageSrc
+        const word = new Word(dom, image)
+        word.start()
+      }
+      const span = document.querySelector('h1')
+
+document.addEventListener('scroll', (e) => {
+  let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+  
+  h1.style.setProperty('--percentage', `${scrolled * 100}%`)
+})
+    </script>
+  </body>
+</html>
